@@ -3,7 +3,7 @@ import { FileText, ExternalLink } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import type { Publication } from "@/lib/mockData";
+import type { Publication } from "@/lib/PublicationsData";
 
 interface PublicationCardProps {
   publication: Publication;
@@ -17,14 +17,21 @@ export const PublicationCard = ({ publication, index }: PublicationCardProps) =>
     workshop: "bg-secondary text-secondary-foreground",
   };
 
+  const typeLabels = {
+    journal: "Journal",
+    conference: "Conference",
+    workshop: "Book chapter",
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
+      
     >
-      <Card className="hover:shadow-medium transition-all duration-300 group">
+      <Card className="hover:shadow-medium transition-all duration-300 group" >
         <CardContent className="pt-6">
           <div className="flex gap-4">
             <div className="flex-shrink-0 p-3 rounded-lg bg-primary/5 text-primary h-fit group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
@@ -36,9 +43,14 @@ export const PublicationCard = ({ publication, index }: PublicationCardProps) =>
                 <h3 className="text-lg font-semibold leading-tight text-foreground">
                   {publication.title}
                 </h3>
-                <Badge className={typeColors[publication.type]} variant="secondary">
-                  {publication.type}
-                </Badge>
+                <div className="flex gap-2">
+                  <Badge className={typeColors[publication.type]} variant="secondary">
+                    {typeLabels[publication.type]}
+                  </Badge>
+                  <Badge className="bg-amber-100 text-amber-900 dark:bg-amber-900 dark:text-amber-100" variant="secondary">
+                    {publication.indexing}
+                  </Badge>
+                </div>
               </div>
               
               <p className="text-sm text-muted-foreground mb-2">

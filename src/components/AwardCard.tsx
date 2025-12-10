@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Award } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import type { Award as AwardType } from "@/lib/mockData";
+import type { Award as AwardType } from "@/lib/AwardsData";
 
 interface AwardCardProps {
   award: AwardType;

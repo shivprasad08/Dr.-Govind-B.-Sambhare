@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { ProjectCard } from "@/components/ProjectCard";
-import { studentProjects } from "@/lib/mockData";
+import { studentProjects } from "@/lib/StudentProject";
 import { Info } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const Students = () => {
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4" data-scroll-section>
+    <div className="min-h-screen pt-24 pb-16 px-4" data-scroll-section style={{ backgroundImage: "url('/bg2.jpg')" }}>
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

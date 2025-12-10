@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Lightbulb, Calendar, CheckCircle2, Clock } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import type { StudentProject } from "@/lib/mockData";
+import type { StudentProject } from "@/lib/StudentProject";
 
 interface ProjectCardProps {
   project: StudentProject;

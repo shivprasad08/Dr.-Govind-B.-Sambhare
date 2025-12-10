@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Briefcase } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import type { Experience } from "@/lib/mockData";
+import type { Experience } from "@/lib/ExperienceData";
 
 interface TimelineItemProps {
   experience: Experience;

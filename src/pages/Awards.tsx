@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { AwardCard } from "@/components/AwardCard";
-import { awards } from "@/lib/mockData";
+import { awards } from "@/lib/AwardsData";
 
 const Awards = () => {
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4" data-scroll-section>
+    <div className="min-h-screen pt-24 pb-16 px-4" data-scroll-section style={{ backgroundImage: "url('/bg2.jpg')" }}>
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

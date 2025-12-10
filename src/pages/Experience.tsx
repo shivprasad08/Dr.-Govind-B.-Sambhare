@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { TimelineItem } from "@/components/TimelineItem";
-import { experiences } from "@/lib/mockData";
+import { experiences } from "@/lib/ExperienceData";
 
 const Experience = () => {
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4" data-scroll-section>
+    <div className="min-h-screen pt-24 pb-16 px-4" data-scroll-section style={{ backgroundImage: "url('/bg2.jpg')" }}>
       <div className="container mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -1,18 +1,31 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { PublicationCard } from "@/components/PublicationCard";
-import { publications } from "@/lib/mockData";
+import { publications } from "@/lib/PublicationsData";
 import { Button } from "@/components/ui/button";
 
 const Publications = () => {
-  const [filter, setFilter] = useState<"all" | "journal" | "conference" | "workshop">("all");
+  const typeOptions = ["all", "journal", "conference", "workshop"] as const;
+  const indexingOptions = ["all", "Scopus", "Google Scholar"] as const;
+  
+  const typeLabels = {
+    all: "All",
+    journal: "Journal",
+    conference: "Conference",
+    workshop: "Book chapter",
+  } as const;
 
-  const filteredPublications = filter === "all" 
-    ? publications 
-    : publications.filter(pub => pub.type === filter);
+  const [typeFilter, setTypeFilter] = useState<(typeof typeOptions)[number]>("all");
+  const [indexingFilter, setIndexingFilter] = useState<(typeof indexingOptions)[number]>("all");
+
+  const filteredPublications = publications.filter(pub => {
+    const typeMatch = typeFilter === "all" || pub.type === typeFilter;
+    const indexingMatch = indexingFilter === "all" || pub.indexing === indexingFilter;
+    return typeMatch && indexingMatch;
+  });
 
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4" data-scroll-section>
+    <div className="min-h-screen pt-24 pb-16 px-4" data-scroll-section style={{ backgroundImage: "url('/bg2.jpg')" }}>
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -25,17 +38,38 @@ const Publications = () => {
             Peer-reviewed research papers, conference proceedings, and scholarly contributions.
           </p>
 
-          <div className="flex flex-wrap gap-2">
-            {(["all", "journal", "conference", "workshop"] as const).map((type) => (
-              <Button
-                key={type}
-                variant={filter === type ? "default" : "outline"}
-                onClick={() => setFilter(type)}
-                className="capitalize"
-              >
-                {type}
-              </Button>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex flex-col items-center">
+              <p className="text-sm font-bold text-center text-black dark:text-white mb-3">Filter by Type</p>
+              <div className="flex flex-wrap gap-2 justify-center">
+                {typeOptions.map((type) => (
+                  <Button
+                    key={type}
+                    variant={typeFilter === type ? "default" : "outline"}
+                    onClick={() => setTypeFilter(type)}
+                    className="capitalize"
+                  >
+                    {typeLabels[type]}
+                  </Button>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <p className="text-sm font-bold text-center text-black dark:text-white mb-3">Filter by Indexing</p>
+              <div className="flex flex-wrap gap-2 justify-center">
+                {indexingOptions.map((indexing) => (
+                  <Button
+                    key={indexing}
+                    variant={indexingFilter === indexing ? "default" : "outline"}
+                    onClick={() => setIndexingFilter(indexing)}
+                    className="capitalize"
+                  >
+                    {indexing}
+                  </Button>
+                ))}
+              </div>
+            </div>
           </div>
         </motion.div>
 

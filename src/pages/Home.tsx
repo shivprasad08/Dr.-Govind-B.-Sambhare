@@ -9,6 +9,7 @@ const Home = () => {
     <div style={{ fontFamily: "font-2" }}>
       {/* Hero Section */}
       <section className="relative pt-20 pb-20 px-4 overflow-hidden" style={{ backgroundImage: "url('/bg2.jpg')" }} data-scroll-section>
+      <section className="relative pt-20 pb-20 px-4 overflow-hidden" style={{ backgroundImage: "url('/bg2.jpg')" }} data-scroll-section>
         <div className="absolute inset-0 bg-white opacity-5" />
         
         <div className="container mx-auto relative z-10">
