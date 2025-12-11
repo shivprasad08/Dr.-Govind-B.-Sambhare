@@ -29,7 +29,7 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
     >
       <Card className="h-full hover:shadow-medium transition-all duration-300">
         <CardHeader>
-          <div className="flex items-start justify-between gap-3 mb-3">
+          <div className="flex items-start justify-between gap-2 sm:gap-3 mb-3 flex-wrap">
             <Badge className={status.color} variant="secondary">
               <StatusIcon className="h-3 w-3 mr-1" />
               {status.label}
@@ -41,10 +41,10 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
               </div>
             )}
           </div>
-          <CardTitle className="text-xl leading-snug">{project.title}</CardTitle>
+          <CardTitle className="text-lg sm:text-xl leading-snug">{project.title}</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-4">
             {project.description}
           </p>
           <div>

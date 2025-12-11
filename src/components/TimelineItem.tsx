@@ -15,32 +15,32 @@ export const TimelineItem = ({ experience, index }: TimelineItemProps) => {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="relative pl-8 pb-12 last:pb-0"
+      className="relative pl-6 sm:pl-8 pb-8 sm:pb-12 last:pb-0"
     >
       {/* Timeline line */}
-      <div className="absolute left-[11px] top-[28px] bottom-0 w-0.5 bg-border" />
+      <div className="absolute left-[9px] sm:left-[11px] top-[28px] bottom-0 w-0.5 bg-border" />
       
       {/* Timeline dot */}
-      <div className="absolute left-0 top-2 w-6 h-6 rounded-full bg-primary flex items-center justify-center shadow-soft">
-        <Briefcase className="h-3 w-3 text-primary-foreground" />
+      <div className="absolute left-0 top-2 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-primary flex items-center justify-center shadow-soft">
+        <Briefcase className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-primary-foreground" />
       </div>
 
-      <Card className="ml-6 hover:shadow-medium transition-shadow duration-300">
-        <CardContent className="pt-6">
-          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
-            <div>
-              <h3 className="text-xl font-semibold text-foreground mb-1">
+      <Card className="ml-4 sm:ml-6 hover:shadow-medium transition-shadow duration-300">
+        <CardContent className="pt-4 sm:pt-6">
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-3 mb-3">
+            <div className="min-w-0">
+              <h3 className="text-base sm:text-xl font-semibold text-foreground mb-1 break-words">
                 {experience.title}
               </h3>
-              <p className="text-sm font-medium text-primary">
+              <p className="text-xs sm:text-sm font-medium text-primary break-words">
                 {experience.organization}
               </p>
             </div>
-            <span className="text-sm text-muted-foreground bg-secondary px-3 py-1 rounded-full whitespace-nowrap self-start">
+            <span className="text-xs sm:text-sm text-muted-foreground bg-secondary px-3 py-1 rounded-full whitespace-nowrap self-start flex-shrink-0">
               {experience.date}
             </span>
           </div>
-          <p className="text-muted-foreground leading-relaxed">
+          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
             {experience.description}
           </p>
         </CardContent>

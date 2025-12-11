@@ -27,13 +27,13 @@ export const AwardCard = ({ award, index }: AwardCardProps) => {
               {award.year}
             </span>
           </div>
-          <CardTitle className="text-xl leading-snug">{award.title}</CardTitle>
+          <CardTitle className="text-lg sm:text-xl leading-snug">{award.title}</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-sm font-medium text-primary mb-2">
+          <p className="text-xs sm:text-sm font-medium text-primary mb-2">
             {award.organization}
           </p>
-          <p className="text-sm text-muted-foreground leading-relaxed">
+          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
             {award.description}
           </p>
         </CardContent>

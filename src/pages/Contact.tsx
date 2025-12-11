@@ -60,21 +60,21 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4" data-scroll-section>
+    <div className="min-h-screen pt-20 sm:pt-24 pb-16 px-4 sm:px-6" data-scroll-section>
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-8 sm:mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
-          <p className="text-lg text-muted-foreground">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
+          <p className="text-base sm:text-lg text-muted-foreground">
             Have questions about research opportunities or want to collaborate? I'd love to hear from you.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}

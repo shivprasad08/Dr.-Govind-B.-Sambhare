@@ -11,25 +11,25 @@ export const Footer = () => {
       data-scroll-section
       style={{ fontFamily: "font-2" }}   // ✅ Footer font applied
     >
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="container mx-auto px-4 sm:px-6 py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           
           {/* Branding */}
-          <div>
+          <div className="sm:col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <span className="font-bold text-lg" style={{ fontFamily: "font-2" }}>
+              <span className="font-bold text-base sm:text-lg" style={{ fontFamily: "font-2" }}>
                 Dr. G.B.Sambare
               </span>
             </div>
-            <p className="text-primary-foreground/80 text-sm pl-2">
+            <p className="text-primary-foreground/80 text-xs sm:text-sm pl-2">
               Dr. G. B. Sambare is a Ph.D. holder in Computer Engineering with over three decades of teaching, research, and administrative experience. His work spans networking, cybersecurity, AI, blockchain, and cloud computing with 100+ research contributions
             </p>
           </div>
 
           {/* Quick Links */}
-          <div className="flex flex-col pl-12">
-            <h3 className="font-semibold mb-4">Quick Links</h3>
-            <div className="flex flex-col gap-2 pl-3 text-sm">
+          <div className="flex flex-col">
+            <h3 className="font-semibold mb-4 text-sm sm:text-base">Quick Links</h3>
+            <div className="flex flex-col gap-2 text-xs sm:text-sm">
               <Link
                 to="/experience"
                 className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
@@ -59,8 +59,8 @@ export const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
-            <div className="flex flex-col gap-3 text-sm">
+            <h3 className="font-semibold mb-4 text-sm sm:text-base">Contact</h3>
+            <div className="flex flex-col gap-3 text-xs sm:text-sm">
               <div className="flex items-start gap-2">
                 <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
@@ -86,7 +86,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
+        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-xs sm:text-sm text-primary-foreground/60">
           <p>
             © {currentYear}. All rights reserved.
           </p>

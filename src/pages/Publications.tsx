@@ -25,7 +25,7 @@ const Publications = () => {
   });
 
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4" data-scroll-section style={{ backgroundImage: "url('/bg2.jpg')" }}>
+    <div className="min-h-screen pt-20 sm:pt-24 pb-16 px-4 sm:px-6" data-scroll-section style={{ backgroundImage: "url('/bg2.jpg')" }}>
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,12 +33,12 @@ const Publications = () => {
           transition={{ duration: 0.6 }}
           className="mb-8"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Publications</h1>
-          <p className="text-lg text-muted-foreground mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Publications</h1>
+          <p className="text-base sm:text-lg text-muted-foreground mb-6">
             Peer-reviewed research papers, conference proceedings, and scholarly contributions.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             <div className="flex flex-col items-center">
               <p className="text-sm font-bold text-center text-black dark:text-white mb-3">Filter by Type</p>
               <div className="flex flex-wrap gap-2 justify-center">

@@ -8,12 +8,11 @@ const Home = () => {
   return (
     <div style={{ fontFamily: "font-2" }}>
       {/* Hero Section */}
-      <section className="relative pt-20 pb-20 px-4 overflow-hidden" style={{ backgroundImage: "url('/bg2.jpg')" }} data-scroll-section>
-      <section className="relative pt-20 pb-20 px-4 overflow-hidden" style={{ backgroundImage: "url('/bg2.jpg')" }} data-scroll-section>
+      <section className="relative pt-16 sm:pt-20 pb-16 sm:pb-20 px-4 sm:px-6 overflow-hidden" style={{ backgroundImage: "url('/bg2.jpg')" }} data-scroll-section>
         <div className="absolute inset-0 bg-white opacity-5" />
         
         <div className="container mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-center max-w-7xl mx-auto">
             {/* Left: Faculty Information */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -27,7 +26,7 @@ const Home = () => {
                 {/* font-1 for main heading */}
                 <h1 
                   style={{ fontFamily: "font-1" }}
-                  className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight whitespace-nowrap"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
                 >
                   Dr. Govind.B. Sambare
                 </h1>
@@ -47,7 +46,7 @@ const Home = () => {
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-3 py-4">
+              <div className="flex flex-wrap gap-2 sm:gap-3 py-4">
                 <div className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
                   PhD (Computer Engg)
                 </div>
@@ -117,7 +116,7 @@ const Home = () => {
                 <img
                   src={facultyImage}
                   alt="Dr. G.B. Sambare - Professor of Computer Engineering"
-                  className="w-auto h-[85vh] object-cover"
+                  className="w-full h-auto sm:h-[50vh] md:h-[70vh] lg:h-[85vh] object-cover rounded-2xl"
                 />
               </div>
               {/* Decorative elements */}
@@ -138,12 +137,12 @@ const Home = () => {
           {/* font-1 for section heading */}
           <motion.h2
             style={{ fontFamily: "font-1" }}
-            className="text-3xl md:text-4xl font-bold text-center mb-12"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12"
           >
             What You'll Find Here
           </motion.h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
             {[
               {
                 icon: BookOpen,
@@ -195,13 +194,13 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4" style={{ backgroundImage: "url('/bg2.jpg')" }}data-scroll-section>
-        <div className="container mx-auto">
+      <section className="py-20 px-4" style={{ backgroundImage: "url('/bg2.jpg')" }} data-scroll-section>
+        <div className="container mx-auto px-4">
           <motion.div className="max-w-3xl mx-auto text-center">
             {/* font-1 for CTA heading */}
             <h2
               style={{ fontFamily: "font-1" }}
-              className="text-3xl md:text-4xl font-bold mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6"
             >
               Ready to Collaborate?
             </h2>
@@ -215,7 +214,7 @@ const Home = () => {
               in learning more about our work, we'd love to hear from you.
             </p>
 
-            <Button size="lg" asChild>
+            <Button size="lg" asChild className="w-full sm:w-auto">
               <Link to="/contact" style={{ fontFamily: "font-2" }}>
                 Get in Touch
               </Link>

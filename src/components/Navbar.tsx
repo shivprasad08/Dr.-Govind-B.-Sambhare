@@ -37,13 +37,13 @@ export const Navbar = () => {
       )}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
 
           {/* ✅ TEXT LOGO WITH FONT-2 */}
           <Link
             to="/"
             style={{ fontFamily: "font-2" }}
-            className="font-bold text-xl sm:text-2xl tracking-wide text-primary-foreground"
+            className="font-bold text-base sm:text-xl md:text-2xl tracking-wide text-primary-foreground"
           >
             Dr. G.B.Sambare
           </Link>
@@ -57,7 +57,7 @@ export const Navbar = () => {
                   style={{ fontFamily: "font-2" }}   // ✅ font-2 applied
                   className={cn(
                     "relative text-primary-foreground transition-all duration-300",
-                    "hover:bg-primary-foreground hover:backdrop-blur-sm",
+                    "hover:bg-white hover:text-primary hover:backdrop-blur-sm",
                     isActive(item.path) &&
                       "bg-primary-foreground/15 font-medium"
                   )}
@@ -94,7 +94,7 @@ export const Navbar = () => {
                     style={{ fontFamily: "font-2" }}  // ✅ font-2 applied
                     className={cn(
                       "w-full justify-start text-primary-foreground transition-all duration-300",
-                      "hover:bg-primary-foreground/10",
+                      "hover:bg-white hover:text-primary",
                       isActive(item.path) &&
                         "bg-primary-foreground/20 font-medium"
                     )}

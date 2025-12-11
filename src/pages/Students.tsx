@@ -6,7 +6,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const Students = () => {
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4" data-scroll-section style={{ backgroundImage: "url('/bg2.jpg')" }}>
+    <div className="min-h-screen pt-20 sm:pt-24 pb-16 px-4 sm:px-6" data-scroll-section style={{ backgroundImage: "url('/bg2.jpg')" }}>
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -14,13 +14,13 @@ const Students = () => {
           transition={{ duration: 0.6 }}
           className="mb-8"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Student Research Opportunities</h1>
-          <p className="text-lg text-muted-foreground mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Student Research Opportunities</h1>
+          <p className="text-base sm:text-lg text-muted-foreground mb-6">
             Available research projects and collaboration opportunities for motivated students.
           </p>
 
-          <Alert className="bg-accent/10 border-accent">
-            <Info className="h-4 w-4 text-accent-foreground" />
+          <Alert className="bg-accent/10 border-accent text-sm sm:text-base">
+            <Info className="h-4 w-4 text-accent-foreground flex-shrink-0" />
             <AlertDescription className="text-accent-foreground">
               Interested in any of these projects? Reach out through the{" "}
               <a href="/contact" className="font-medium underline">
@@ -31,7 +31,7 @@ const Students = () => {
           </Alert>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {studentProjects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
