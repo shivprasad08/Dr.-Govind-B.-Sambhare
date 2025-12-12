@@ -27,9 +27,9 @@ export const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="flex flex-col">
+          <div className="flex flex-col place-self-center items-start text-left">
             <h3 className="font-semibold mb-4 text-sm sm:text-base">Quick Links</h3>
-            <div className="flex flex-col gap-2 text-xs sm:text-sm">
+            <div className="flex flex-col gap-2 text-xs sm:text-sm items-start text-left">
               <Link
                 to="/experience"
                 className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"

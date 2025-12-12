@@ -60,7 +60,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen pt-20 sm:pt-24 pb-16 px-4 sm:px-6" data-scroll-section>
+    <div className="min-h-screen pt-20 sm:pt-24 pb-16 px-4 sm:px-6" data-scroll-section style={{ fontFamily: "font-2" }}>
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -68,8 +68,8 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="mb-8 sm:mb-12"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
-          <p className="text-base sm:text-lg text-muted-foreground">
+          <h1 style={{ fontFamily: "font-1" }} className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
+          <p style={{ fontFamily: "font-2" }} className="text-base sm:text-lg text-muted-foreground">
             Have questions about research opportunities or want to collaborate? I'd love to hear from you.
           </p>
         </motion.div>

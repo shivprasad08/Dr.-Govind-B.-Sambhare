@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, BookOpen, Users, Mail, Phone } from "lucide-react";
-import facultyImage from "@/assets/faculty-profile.jpg";
 
 const Home = () => {
   return (
@@ -111,13 +110,8 @@ const Home = () => {
               data-scroll
               data-scroll-speed="2"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-elegant">
+              <div className="relative rounded-2xl overflow-hidden shadow-elegant w-full h-[50vh] sm:h-[50vh] md:h-[70vh] lg:h-[85vh]" style={{ backgroundImage: "url('/bg3.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
                 <div className="absolute inset-0 bg-gradient-primary opacity-10 z-10" />
-                <img
-                  src={facultyImage}
-                  alt="Dr. G.B. Sambare - Professor of Computer Engineering"
-                  className="w-full h-auto sm:h-[50vh] md:h-[70vh] lg:h-[85vh] object-cover rounded-2xl"
-                />
               </div>
               {/* Decorative elements */}
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl -z-10" />

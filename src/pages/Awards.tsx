@@ -4,7 +4,7 @@ import { awards } from "@/lib/AwardsData";
 
 const Awards = () => {
   return (
-    <div className="min-h-screen pt-20 sm:pt-24 pb-16 px-4 sm:px-6" data-scroll-section style={{ backgroundImage: "url('/bg2.jpg')" }}>
+    <div className="min-h-screen pt-20 sm:pt-24 pb-16 px-4 sm:px-6" data-scroll-section style={{ backgroundImage: "url('/bg2.jpg')", fontFamily: "font-2" }}>
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -12,8 +12,8 @@ const Awards = () => {
           transition={{ duration: 0.6 }}
           className="mb-8 sm:mb-12"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Awards & Recognition</h1>
-          <p className="text-base sm:text-lg text-muted-foreground">
+          <h1 style={{ fontFamily: "font-1" }} className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Awards & Recognition</h1>
+          <p style={{ fontFamily: "font-2" }} className="text-base sm:text-lg text-muted-foreground">
             Honors and achievements recognizing excellence in research, teaching, and service to the academic community.
           </p>
         </motion.div>

@@ -18,14 +18,16 @@ const Publications = () => {
   const [typeFilter, setTypeFilter] = useState<(typeof typeOptions)[number]>("all");
   const [indexingFilter, setIndexingFilter] = useState<(typeof indexingOptions)[number]>("all");
 
-  const filteredPublications = publications.filter(pub => {
-    const typeMatch = typeFilter === "all" || pub.type === typeFilter;
-    const indexingMatch = indexingFilter === "all" || pub.indexing === indexingFilter;
-    return typeMatch && indexingMatch;
-  });
+  const filteredPublications = publications
+    .filter(pub => {
+      const typeMatch = typeFilter === "all" || pub.type === typeFilter;
+      const indexingMatch = indexingFilter === "all" || pub.indexing === indexingFilter;
+      return typeMatch && indexingMatch;
+    })
+    .sort((a, b) => parseInt(b.year) - parseInt(a.year));
 
   return (
-    <div className="min-h-screen pt-20 sm:pt-24 pb-16 px-4 sm:px-6" data-scroll-section style={{ backgroundImage: "url('/bg2.jpg')" }}>
+    <div className="min-h-screen pt-20 sm:pt-24 pb-16 px-4 sm:px-6" data-scroll-section style={{ backgroundImage: "url('/bg2.jpg')", fontFamily: "font-2" }}>
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,8 +35,8 @@ const Publications = () => {
           transition={{ duration: 0.6 }}
           className="mb-8"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Publications</h1>
-          <p className="text-base sm:text-lg text-muted-foreground mb-6">
+          <h1 style={{ fontFamily: "font-1" }} className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Publications</h1>
+          <p style={{ fontFamily: "font-2" }} className="text-base sm:text-lg text-muted-foreground mb-6">
             Peer-reviewed research papers, conference proceedings, and scholarly contributions.
           </p>
 
